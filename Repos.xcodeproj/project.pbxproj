@@ -15,6 +15,9 @@
 		3C7E660523330B300057C222 /* ReposKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7E65FE23330B300057C222 /* ReposKit.framework */; };
 		3C7E660623330B300057C222 /* ReposKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7E65FE23330B300057C222 /* ReposKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C7E660B23330B550057C222 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79B4E02332FE6F00533A33 /* ReposViewController.swift */; };
+		3C7FFA5A23332D9C00167D66 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7FFA5923332D9C00167D66 /* Github.swift */; };
+		3C7FFA5C23332DC600167D66 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7FFA5B23332DC600167D66 /* Analytics.swift */; };
+		3C7FFA5E23332DE500167D66 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7FFA5D23332DE500167D66 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		3C7E660023330B300057C222 /* ReposKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReposKit.h; sourceTree = "<group>"; };
 		3C7E660123330B300057C222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C7E660C23330C820057C222 /* Repos.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Repos.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3C7FFA5923332D9C00167D66 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
+		3C7FFA5B23332DC600167D66 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		3C7FFA5D23332DE500167D66 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,9 @@
 				3C79B4E02332FE6F00533A33 /* ReposViewController.swift */,
 				3C7E660023330B300057C222 /* ReposKit.h */,
 				3C7E660123330B300057C222 /* Info.plist */,
+				3C7FFA5923332D9C00167D66 /* Github.swift */,
+				3C7FFA5B23332DC600167D66 /* Analytics.swift */,
+				3C7FFA5D23332DE500167D66 /* Environment.swift */,
 			);
 			path = ReposKit;
 			sourceTree = "<group>";
@@ -236,7 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7FFA5A23332D9C00167D66 /* Github.swift in Sources */,
+				3C7FFA5E23332DE500167D66 /* Environment.swift in Sources */,
 				3C7E660B23330B550057C222 /* ReposViewController.swift in Sources */,
+				3C7FFA5C23332DC600167D66 /* Analytics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
