@@ -9,10 +9,37 @@
 /* Begin PBXBuildFile section */
 		3C79B4DD2332FE6F00533A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79B4DC2332FE6F00533A33 /* AppDelegate.swift */; };
 		3C79B4DF2332FE6F00533A33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79B4DE2332FE6F00533A33 /* SceneDelegate.swift */; };
-		3C79B4E12332FE6F00533A33 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79B4E02332FE6F00533A33 /* ReposViewController.swift */; };
 		3C79B4E62332FE7000533A33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C79B4E52332FE7000533A33 /* Assets.xcassets */; };
 		3C79B4E92332FE7000533A33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C79B4E72332FE7000533A33 /* LaunchScreen.storyboard */; };
+		3C7E660223330B300057C222 /* ReposKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7E660023330B300057C222 /* ReposKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C7E660523330B300057C222 /* ReposKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7E65FE23330B300057C222 /* ReposKit.framework */; };
+		3C7E660623330B300057C222 /* ReposKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7E65FE23330B300057C222 /* ReposKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C7E660B23330B550057C222 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79B4E02332FE6F00533A33 /* ReposViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C7E660323330B300057C222 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C79B4D12332FE6F00533A33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C7E65FD23330B300057C222;
+			remoteInfo = ReposKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3C7E660723330B300057C222 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3C7E660623330B300057C222 /* ReposKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3C79B4D92332FE6F00533A33 /* Repos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Repos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +49,21 @@
 		3C79B4E52332FE7000533A33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C79B4E82332FE7000533A33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C79B4EA2332FE7000533A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C7E65FE23330B300057C222 /* ReposKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReposKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C7E660023330B300057C222 /* ReposKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReposKit.h; sourceTree = "<group>"; };
+		3C7E660123330B300057C222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3C79B4D62332FE6F00533A33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C7E660523330B300057C222 /* ReposKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C7E65FB23330B300057C222 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				3C79B4DB2332FE6F00533A33 /* Repos */,
+				3C7E65FF23330B300057C222 /* ReposKit */,
 				3C79B4DA2332FE6F00533A33 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				3C79B4D92332FE6F00533A33 /* Repos.app */,
+				3C7E65FE23330B300057C222 /* ReposKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,7 +96,6 @@
 			children = (
 				3C79B4DC2332FE6F00533A33 /* AppDelegate.swift */,
 				3C79B4DE2332FE6F00533A33 /* SceneDelegate.swift */,
-				3C79B4E02332FE6F00533A33 /* ReposViewController.swift */,
 				3C79B4E52332FE7000533A33 /* Assets.xcassets */,
 				3C79B4E72332FE7000533A33 /* LaunchScreen.storyboard */,
 				3C79B4EA2332FE7000533A33 /* Info.plist */,
@@ -64,7 +103,28 @@
 			path = Repos;
 			sourceTree = "<group>";
 		};
+		3C7E65FF23330B300057C222 /* ReposKit */ = {
+			isa = PBXGroup;
+			children = (
+				3C79B4E02332FE6F00533A33 /* ReposViewController.swift */,
+				3C7E660023330B300057C222 /* ReposKit.h */,
+				3C7E660123330B300057C222 /* Info.plist */,
+			);
+			path = ReposKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3C7E65F923330B300057C222 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C7E660223330B300057C222 /* ReposKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3C79B4D82332FE6F00533A33 /* Repos */ = {
@@ -74,15 +134,35 @@
 				3C79B4D52332FE6F00533A33 /* Sources */,
 				3C79B4D62332FE6F00533A33 /* Frameworks */,
 				3C79B4D72332FE6F00533A33 /* Resources */,
+				3C7E660723330B300057C222 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3C7E660423330B300057C222 /* PBXTargetDependency */,
 			);
 			name = Repos;
 			productName = Repos;
 			productReference = 3C79B4D92332FE6F00533A33 /* Repos.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3C7E65FD23330B300057C222 /* ReposKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C7E660A23330B300057C222 /* Build configuration list for PBXNativeTarget "ReposKit" */;
+			buildPhases = (
+				3C7E65F923330B300057C222 /* Headers */,
+				3C7E65FA23330B300057C222 /* Sources */,
+				3C7E65FB23330B300057C222 /* Frameworks */,
+				3C7E65FC23330B300057C222 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReposKit;
+			productName = ReposKit;
+			productReference = 3C7E65FE23330B300057C222 /* ReposKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +175,9 @@
 				ORGANIZATIONNAME = danwallacenz;
 				TargetAttributes = {
 					3C79B4D82332FE6F00533A33 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					3C7E65FD23330B300057C222 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
@@ -113,6 +196,7 @@
 			projectRoot = "";
 			targets = (
 				3C79B4D82332FE6F00533A33 /* Repos */,
+				3C7E65FD23330B300057C222 /* ReposKit */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +211,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C7E65FC23330B300057C222 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -134,13 +225,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C79B4E12332FE6F00533A33 /* ReposViewController.swift in Sources */,
 				3C79B4DD2332FE6F00533A33 /* AppDelegate.swift in Sources */,
 				3C79B4DF2332FE6F00533A33 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C7E65FA23330B300057C222 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C7E660B23330B550057C222 /* ReposViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C7E660423330B300057C222 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C7E65FD23330B300057C222 /* ReposKit */;
+			targetProxy = 3C7E660323330B300057C222 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3C79B4E72332FE7000533A33 /* LaunchScreen.storyboard */ = {
@@ -271,6 +377,7 @@
 		3C79B4EE2332FE7000533A33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JP5YDXJS2P;
@@ -289,6 +396,7 @@
 		3C79B4EF2332FE7000533A33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JP5YDXJS2P;
@@ -301,6 +409,60 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3C7E660823330B300057C222 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JP5YDXJS2P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ReposKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.danwallace.ReposKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3C7E660923330B300057C222 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JP5YDXJS2P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ReposKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.danwallace.ReposKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -321,6 +483,15 @@
 			buildConfigurations = (
 				3C79B4EE2332FE7000533A33 /* Debug */,
 				3C79B4EF2332FE7000533A33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C7E660A23330B300057C222 /* Build configuration list for PBXNativeTarget "ReposKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C7E660823330B300057C222 /* Debug */,
+				3C7E660923330B300057C222 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

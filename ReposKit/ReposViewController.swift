@@ -87,14 +87,14 @@ struct Environment {
 
 var Current = Environment()
 
-class ReposViewController: UITableViewController {
+public class ReposViewController: UITableViewController {
   var repos: [GitHub.Repo] = [] {
     didSet {
       self.tableView.reloadData()
     }
   }
 
-  override func viewDidLoad() {
+  public override func viewDidLoad() {
     super.viewDidLoad()
 
     self.title = "Point-Free Repos"
@@ -122,11 +122,11 @@ class ReposViewController: UITableViewController {
     }
   }
 
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.repos.count
   }
 
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let repo = self.repos[indexPath.row]
 
     let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
@@ -149,7 +149,7 @@ class ReposViewController: UITableViewController {
     return cell
   }
 
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+  public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let repo = self.repos[indexPath.row]
     Current.analytics.track(.tappedRepo(repo))
     let vc = SFSafariViewController(url: repo.htmlUrl)

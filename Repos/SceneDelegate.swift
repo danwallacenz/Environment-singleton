@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReposKit
 
 @UIApplicationMain
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, UIApplicationDelegate {
