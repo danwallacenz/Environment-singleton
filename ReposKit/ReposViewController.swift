@@ -1,7 +1,7 @@
 import UIKit
 import SafariServices
 
-enum Result<Value, Error> {
+public enum Result<Value, Error> {
   case success(Value)
   case failure(Error)
 }
@@ -10,8 +10,8 @@ enum Result<Value, Error> {
 //  func fetchRepos(onComplete completionHandler: (@escaping (Result<[GitHub.Repo], Error>) -> Void))
 //}
 
-struct GitHub { //: GitHubProtocol {
-  struct Repo: Decodable {
+public struct GitHub { //: GitHubProtocol {
+  public struct Repo: Decodable {
     var archived: Bool
     var description: String?
     var htmlUrl: URL
@@ -19,7 +19,7 @@ struct GitHub { //: GitHubProtocol {
     var pushedAt: Date?
   }
 
-  var fetchRepos = fetchRepos(onComplete:)
+  public var fetchRepos = fetchRepos(onComplete:)
 }
 
 private func fetchRepos(onComplete completionHandler: (@escaping (Result<[GitHub.Repo], Error>) -> Void)) {
@@ -51,8 +51,8 @@ private func dataTask<T: Decodable>(_ path: String, completionHandler: (@escapin
     }.resume()
 }
 
-struct Analytics {
-  struct Event {
+public struct Analytics {
+  public struct Event {
     var name: String
     var properties: [String: String]
 
@@ -72,20 +72,20 @@ struct Analytics {
     }
   }
 
-  var track = track(_:)
+  public var track = track(_:)
 }
 
 private func track(_ event: Analytics.Event) {
   print("Tracked", event)
 }
 
-struct Environment {
-  var analytics = Analytics()
-  var date: () -> Date = Date.init
-  var gitHub = GitHub()
+public struct Environment {
+  public var analytics = Analytics()
+  public var date: () -> Date = Date.init
+  public var gitHub = GitHub()
 }
 
-var Current = Environment()
+public var Current = Environment()
 
 public class ReposViewController: UITableViewController {
   var repos: [GitHub.Repo] = [] {
@@ -169,13 +169,13 @@ extension GitHub {
   })
 }
 
-extension Analytics {
+public extension Analytics {
   static let mock = Analytics(track: { event in
     print("Mock track", event)
   })
 }
 
-extension Environment {
+public extension Environment {
   static let mock = Environment(
     analytics: .mock,
     date: { Date(timeIntervalSinceReferenceDate: 557152051) },
