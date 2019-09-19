@@ -23,7 +23,8 @@ public struct GitHub { //: GitHubProtocol {
 }
 
 private func fetchRepos(onComplete completionHandler: (@escaping (Result<[GitHub.Repo], Error>) -> Void)) {
-  dataTask("orgs/pointfreeco/repos", completionHandler: completionHandler)
+//  dataTask("orgs/pointfreeco/repos", completionHandler: completionHandler)
+    dataTask("users/danwallacenz/repos", completionHandler: completionHandler)
 }
 
 private func dataTask<T: Decodable>(_ path: String, completionHandler: (@escaping (Result<T, Error>) -> Void)) {
@@ -157,7 +158,7 @@ public class ReposViewController: UITableViewController {
   }
 }
 
-extension GitHub {
+public extension GitHub {
   static let mock = GitHub(fetchRepos: { callback in
     callback(
       .success(
