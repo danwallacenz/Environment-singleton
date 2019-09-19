@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C79B4DD2332FE6F00533A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79B4DC2332FE6F00533A33 /* AppDelegate.swift */; };
 		3C79B4DF2332FE6F00533A33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79B4DE2332FE6F00533A33 /* SceneDelegate.swift */; };
-		3C79B4E12332FE6F00533A33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79B4E02332FE6F00533A33 /* ViewController.swift */; };
-		3C79B4E42332FE6F00533A33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C79B4E22332FE6F00533A33 /* Main.storyboard */; };
+		3C79B4E12332FE6F00533A33 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79B4E02332FE6F00533A33 /* ReposViewController.swift */; };
 		3C79B4E62332FE7000533A33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C79B4E52332FE7000533A33 /* Assets.xcassets */; };
 		3C79B4E92332FE7000533A33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C79B4E72332FE7000533A33 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +18,7 @@
 		3C79B4D92332FE6F00533A33 /* Repos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Repos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C79B4DC2332FE6F00533A33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C79B4DE2332FE6F00533A33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3C79B4E02332FE6F00533A33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3C79B4E32332FE6F00533A33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C79B4E02332FE6F00533A33 /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
 		3C79B4E52332FE7000533A33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C79B4E82332FE7000533A33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C79B4EA2332FE7000533A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +56,7 @@
 			children = (
 				3C79B4DC2332FE6F00533A33 /* AppDelegate.swift */,
 				3C79B4DE2332FE6F00533A33 /* SceneDelegate.swift */,
-				3C79B4E02332FE6F00533A33 /* ViewController.swift */,
-				3C79B4E22332FE6F00533A33 /* Main.storyboard */,
+				3C79B4E02332FE6F00533A33 /* ReposViewController.swift */,
 				3C79B4E52332FE7000533A33 /* Assets.xcassets */,
 				3C79B4E72332FE7000533A33 /* LaunchScreen.storyboard */,
 				3C79B4EA2332FE7000533A33 /* Info.plist */,
@@ -127,7 +124,6 @@
 			files = (
 				3C79B4E92332FE7000533A33 /* LaunchScreen.storyboard in Resources */,
 				3C79B4E62332FE7000533A33 /* Assets.xcassets in Resources */,
-				3C79B4E42332FE6F00533A33 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C79B4E12332FE6F00533A33 /* ViewController.swift in Sources */,
+				3C79B4E12332FE6F00533A33 /* ReposViewController.swift in Sources */,
 				3C79B4DD2332FE6F00533A33 /* AppDelegate.swift in Sources */,
 				3C79B4DF2332FE6F00533A33 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +143,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3C79B4E22332FE6F00533A33 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C79B4E32332FE6F00533A33 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3C79B4E72332FE7000533A33 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
