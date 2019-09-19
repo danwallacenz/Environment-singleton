@@ -62,17 +62,3 @@ private func dataTask<T: Decodable>(_ path: String, completionHandler: (@escapin
     }
     }.resume()
 }
-
-//extension GitHub.Repo {
-//    public init(archived: Bool,
-//    description: String?,
-//    htmlUrl: URL,
-//    name: String,
-//    pushedAt: Date?) {
-//        self.archived = archived
-//        self.description = description
-//        self.htmlUrl = htmlUrl
-//        self.name = name
-//        self.pushedAt = pushedAt
-//    }
-//}

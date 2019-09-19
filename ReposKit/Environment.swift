@@ -1,6 +1,8 @@
 
 public struct Environment {
     public var analytics = Analytics()
+    // always produces the current date
+    // just having a date would freeze it
     public var date: () -> Date = Date.init
     public var gitHub = GitHub()
     
