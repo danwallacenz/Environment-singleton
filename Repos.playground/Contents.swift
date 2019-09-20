@@ -15,6 +15,7 @@ extension GitHub.Repo {
 }
 
 extension Array where Element == GitHub.Repo {
+    
     static let mocks = [
         GitHub.Repo.mock,
         with(.mock, set(\GitHub.Repo.name, "Nomadic Blob")),
@@ -28,7 +29,16 @@ extension Array where Element == GitHub.Repo {
                     "Travels with Blobby")
             )
         )
-    ]
+        ] + manyMocks(5)
+    
+    static func manyMocks(_ count: Int) -> Array {
+      return (1...count).map { n in
+        with(.mock, concat(
+          over(\.name) { "#\(n): \($0)" },
+          set(\GitHub.Repo.pushedAt, .mock - 60*60*24*TimeInterval(n))
+        ))
+      }
+    }
 }
 
 extension GitHub {
