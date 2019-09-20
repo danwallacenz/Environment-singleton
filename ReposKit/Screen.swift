@@ -1,8 +1,8 @@
 import UIKit
 
 public struct Screen {
-    var height = String(describing: UIScreen.main.bounds.height)
-    var width = String(describing: UIScreen.main.bounds.width)
+    public var height = String(describing: UIScreen.main.bounds.height)
+    public var width = String(describing: UIScreen.main.bounds.width)
     
     init() {}
     

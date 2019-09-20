@@ -5,8 +5,8 @@ public struct Analytics {
     
     public struct Event {
         
-        var name: String
-        var properties: [String: String]
+        public var name: String
+        public var properties: [String: String]
 
         static func tappedRepo(_ repo: GitHub.Repo) -> Event {
             

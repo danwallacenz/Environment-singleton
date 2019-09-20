@@ -1,5 +1,6 @@
 import UIKit
 import ReposKit
+import Overture
 
 let reposViewController = ReposViewController()
 
@@ -13,10 +14,27 @@ extension GitHub.Repo {
         pushedAt: .mock - 24*60*60 * 124)
 }
 
+extension Array where Element == GitHub.Repo {
+    static let mocks = [
+        GitHub.Repo.mock,
+        with(.mock, set(\GitHub.Repo.name, "Nomadic Blob")),
+        with(.mock,
+             concat(
+                set(\.name,
+                    "Nomadic Blobby"),
+                set(\GitHub.Repo.pushedAt,
+                     Date.mock - 24*60*60 * 123),
+                set(\.description,
+                    "Travels with Blobby")
+            )
+        )
+    ]
+}
+
 extension GitHub {
     static let mock = GitHub(fetchRepos: { callback in
         callback(
-          .success([.mock])
+          .success(.mocks)
         )
     })
     
@@ -107,7 +125,7 @@ Date.timeIntervalSinceReferenceDate
 
 Current = Environment()
 Current.calendar = .mock
-//Current = .mock
+Current = .mock
 
 import PlaygroundSupport
 let vc = UINavigationController(rootViewController: reposViewController)

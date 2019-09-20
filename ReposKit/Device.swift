@@ -1,8 +1,8 @@
 import UIKit
 
 public struct Device {
-    var systemName = UIDevice.current.systemName
-    var systemVersion = UIDevice.current.systemVersion
+    public var systemName = UIDevice.current.systemName
+    public var systemVersion = UIDevice.current.systemVersion
     
     init() {}
     

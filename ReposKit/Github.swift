@@ -5,11 +5,11 @@ public enum Result<Value, Error> {
 
 public struct GitHub { 
   public struct Repo: Decodable {
-    var archived: Bool
-    var description: String?
-    var htmlUrl: URL
-    var name: String
-    var pushedAt: Date?
+    public var archived: Bool
+    public var description: String?
+    public var htmlUrl: URL
+    public var name: String
+    public var pushedAt: Date?
     
     public init(
         archived: Bool,
