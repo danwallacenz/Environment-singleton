@@ -29,6 +29,14 @@ extension GitHub {
     })
 }
 
+extension Calendar {
+    static var mock: Calendar {
+        var c = Calendar(identifier: .gregorian)
+        c.locale = Locale(identifier: "zh_HK")
+        return c
+    }
+}
+
 extension Analytics {
     static let mock = Analytics(
         track: { event in
@@ -47,6 +55,7 @@ extension Date {
 extension Environment {
     static let mock = Environment(
         analytics: .mock,
+        calendar: .mock,
         date: { .mock },
         device: .mock,
         gitHub: .mock,
@@ -79,7 +88,7 @@ extension Version {
 //    print("Test tracked", event)
 //}
 
-Current.analytics = .mock
+//Current.analytics = .mock
 
 //Current.gitHub = .mock
 //Current.gitHub = .errorMock
@@ -88,10 +97,11 @@ Date.timeIntervalSinceReferenceDate
 
 //Current.date = Date.init
 //Current.date = { Date() }
-Current.date = { Date(timeIntervalSinceReferenceDate: 590561316) }
+//Current.date = { Date(timeIntervalSinceReferenceDate: 590561316) }
 
-//Current = Environment()
-Current = .mock
+Current = Environment()
+Current.calendar = .mock
+//Current = .mock
 
 import PlaygroundSupport
 let vc = UINavigationController(rootViewController: reposViewController)
