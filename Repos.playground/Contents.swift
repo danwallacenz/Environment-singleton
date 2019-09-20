@@ -29,10 +29,16 @@ extension GitHub {
     })
 }
 
+extension Locale {
+    static let mock = Locale(identifier: "en_NZ")
+    static let mockHongKong = Locale(identifier: "zh_HK")
+    static let mockGermany = Locale(identifier: "de_DE")
+}
+
 extension Calendar {
     static var mock: Calendar {
         var c = Calendar(identifier: .gregorian)
-        c.locale = Locale(identifier: "zh_HK")
+        c.locale = .mock
         return c
     }
 }
