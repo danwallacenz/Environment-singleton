@@ -39,6 +39,23 @@ public class ReposViewController: UITableViewController {
   public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.repos.count
   }
+    
+    private var dateComponentsFormatter: DateComponentsFormatter {
+        let dateComponentsFormatter = DateComponentsFormatter()
+        dateComponentsFormatter.allowedUnits = [.day, .hour, .minute, .second]
+        dateComponentsFormatter.maximumUnitCount = 1
+        dateComponentsFormatter.unitsStyle = .abbreviated
+        
+//        var calendar = Calendar.autoupdatingCurrent //Calendar(identifier: .gregorian)
+////        calendar.locale =
+////        let lang = Locale.autoupdatingCurrent.languageCode
+//        let locale = Locale.autoupdatingCurrent
+//        let lang = locale.languageCode
+////        locale.languageCode = "en_NZ"
+//        dateComponentsFormatter.calendar = Calendar.autoupdatingCurrent
+       
+        return dateComponentsFormatter
+    }
 
   public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let repo = self.repos[indexPath.row]

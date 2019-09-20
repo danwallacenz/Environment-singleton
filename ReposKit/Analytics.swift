@@ -14,12 +14,12 @@ public struct Analytics {
                 name: "tapped_repo",
                 properties: [
                   "repo_name": repo.name,
-                  "build": Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "Unknown",
-                  "release": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "Unknown",
-                  "screen_height": String(describing: UIScreen.main.bounds.height),
-                  "screen_width": String(describing: UIScreen.main.bounds.width),
-                  "system_name": UIDevice.current.systemName,
-                  "system_version": UIDevice.current.systemVersion,
+                  "build": Current.version.build,
+                  "release": Current.version.release,
+                  "screen_height": Current.screen.height,
+                  "screen_width": Current.screen.width,
+                  "system_name": Current.device.systemName,
+                  "system_version": Current.device.systemVersion,
                   ]
             )
         }

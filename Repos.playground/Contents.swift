@@ -3,15 +3,20 @@ import ReposKit
 
 let reposViewController = ReposViewController()
 
+extension GitHub.Repo {
+    static let mock =
+    GitHub.Repo(
+        archived: false,
+        description: "Blob's blog",
+        htmlUrl: URL(string: "https://www.pointfree.co")!,
+        name: "Bloblog",
+        pushedAt: .mock - 24*60*60 * 124)
+}
+
 extension GitHub {
-    
     static let mock = GitHub(fetchRepos: { callback in
         callback(
-          .success(
-            [
-              GitHub.Repo(archived: false, description: "Blob's blog", htmlUrl: URL(string: "https://www.pointfree.co")!, name: "Bloblog", pushedAt: Date(timeIntervalSinceReferenceDate: 547152021))
-            ]
-          )
+          .success([.mock])
         )
     })
     
@@ -25,17 +30,45 @@ extension GitHub {
 }
 
 extension Analytics {
-    static let mock = Analytics(track: { event in
-        print("Mock track", event)
-    })
+    static let mock = Analytics(
+        track: { event in
+            print("Mock track", event)
+        }
+    )
+}
+
+extension Date {
+    static let mock
+        = Date(
+            timeIntervalSinceReferenceDate: 590561316
+        )
 }
 
 extension Environment {
     static let mock = Environment(
         analytics: .mock,
-        date: { Date(timeIntervalSinceReferenceDate: 557152051) },
-        gitHub: .mock
+        date: { .mock },
+        device: .mock,
+        gitHub: .mock,
+        screen: .mock,
+        version: .mock
     )
+}
+
+extension Device {
+    static let mock = Device(systemName: "Mock iOS", systemVersion: "11.mock")
+}
+
+extension Screen {
+    static let mock
+        = Screen(
+        height: "568",
+        width: "376"
+    )
+}
+
+extension Version {
+    static let mock = Version(build: "42", release: "0.0.1")
 }
 
 //Current.gitHub.fetchRepos = { callback in
@@ -57,7 +90,8 @@ Date.timeIntervalSinceReferenceDate
 //Current.date = { Date() }
 Current.date = { Date(timeIntervalSinceReferenceDate: 590561316) }
 
-//Current = .mock
+//Current = Environment()
+Current = .mock
 
 import PlaygroundSupport
 let vc = UINavigationController(rootViewController: reposViewController)

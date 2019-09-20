@@ -18,6 +18,9 @@
 		3C7FFA5A23332D9C00167D66 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7FFA5923332D9C00167D66 /* Github.swift */; };
 		3C7FFA5C23332DC600167D66 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7FFA5B23332DC600167D66 /* Analytics.swift */; };
 		3C7FFA5E23332DE500167D66 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7FFA5D23332DE500167D66 /* Environment.swift */; };
+		3C7FFA6023345BCA00167D66 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7FFA5F23345BCA00167D66 /* Version.swift */; };
+		3C7FFA6223345BE500167D66 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7FFA6123345BE500167D66 /* Screen.swift */; };
+		3C7FFA6423345C3C00167D66 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7FFA6323345C3C00167D66 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		3C7FFA5923332D9C00167D66 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
 		3C7FFA5B23332DC600167D66 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		3C7FFA5D23332DE500167D66 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		3C7FFA5F23345BCA00167D66 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		3C7FFA6123345BE500167D66 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		3C7FFA6323345C3C00167D66 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,9 @@
 				3C7FFA5923332D9C00167D66 /* Github.swift */,
 				3C7FFA5B23332DC600167D66 /* Analytics.swift */,
 				3C7FFA5D23332DE500167D66 /* Environment.swift */,
+				3C7FFA5F23345BCA00167D66 /* Version.swift */,
+				3C7FFA6123345BE500167D66 /* Screen.swift */,
+				3C7FFA6323345C3C00167D66 /* Device.swift */,
 			);
 			path = ReposKit;
 			sourceTree = "<group>";
@@ -246,9 +255,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C7FFA5A23332D9C00167D66 /* Github.swift in Sources */,
+				3C7FFA6023345BCA00167D66 /* Version.swift in Sources */,
 				3C7FFA5E23332DE500167D66 /* Environment.swift in Sources */,
 				3C7E660B23330B550057C222 /* ReposViewController.swift in Sources */,
 				3C7FFA5C23332DC600167D66 /* Analytics.swift in Sources */,
+				3C7FFA6423345C3C00167D66 /* Device.swift in Sources */,
+				3C7FFA6223345BE500167D66 /* Screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
